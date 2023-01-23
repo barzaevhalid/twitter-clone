@@ -8,8 +8,6 @@ import React from 'react';
 import Modal from '../components/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 
 
@@ -60,25 +58,26 @@ const LoginSide = styled('section')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center '
 }));
-const CustomDialogActions = styled(DialogActions)(({theme}) => ({
+const CustomDialogActions = styled(DialogActions)(({ theme }) => ({
   paddingBottom: '15px'
-})) 
+}))
 
 const LoginSideWrapper = styled('div')(({ theme }) => ({
   width: 380,
 }));
 const SignIn: React.FC = () => {
 
-  const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
+  const [open, setOpen] = React.useState<'signIn' | 'signOut' | 'signUp' | 'singUpOut'>();
+
+  const handleClickOpen = (open: 'signIn' | 'signOut' | 'signUp' | 'singUpOut') => {
+    setOpen(open);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleClose = (close: 'signIn' | 'signOut' | 'signUp' | 'singUpOut') => {
+    setOpen(close);
   };
 
-  
+
 
   return (
     <Wrapper>
@@ -98,19 +97,18 @@ const SignIn: React.FC = () => {
       </BlueSide>
 
       <LoginSide>
+
         <LoginSideWrapper>
           <TwitterIcon fontSize='inherit' sx={{ fontSize: '45px', color: '#0075edc4' }} />
-
           <Typography fontWeight={700} fontSize={33} mt={'20px'} variant='h4'>Узнайте что происходит в мире прямо сейчас</Typography>
           <Typography mt={'45px'}><b>Присоединяйтесь к Твиттеру прямо сейчас!</b></Typography>
           <br />
-          <Button variant='contained' sx={{ background: "#26abf3" }} fullWidth>Зарегистироваться</Button>
-          <Button onClick={handleClickOpen} sx={{ mt: "10px" }} color="primary" variant='outlined' fullWidth>Войти</Button>
-
+          <Button onClick={() => handleClickOpen('signUp')} variant='contained' sx={{ background: "#26abf3" }} fullWidth>Зарегистироваться</Button>
+          <Button onClick={() => handleClickOpen('signIn')} sx={{ mt: "10px" }} color="primary" variant='outlined' fullWidth>Войти</Button>
         </LoginSideWrapper>
 
-        <Modal open={open} handleClose={handleClose} title={'Войти в твиттер'}>
-       <DialogContent>
+        <Modal open={open === 'signIn'} handleClose={() => handleClose("signOut")} title={'Войти в твиттер'}>
+          <DialogContent>
             <TextField
               autoFocus
               margin="dense"
@@ -120,7 +118,7 @@ const SignIn: React.FC = () => {
               fullWidth
               variant="standard"
             />
-             <TextField
+            <TextField
               autoFocus
               margin="dense"
               id="password"
@@ -131,10 +129,45 @@ const SignIn: React.FC = () => {
             />
           </DialogContent>
           <CustomDialogActions>
-            <Button onClick={handleClose} variant='outlined'>Закрыть</Button>
-            <Button onClick={handleClose} variant='contained'>Войти</Button>
+            <Button onClick={() => handleClose('signOut')} variant='outlined'>Закрыть</Button>
+            <Button onClick={() => handleClose('signOut')} variant='contained'>Войти</Button>
           </CustomDialogActions>
-          </Modal>
+        </Modal>
+        <Modal open={open === 'signUp'} handleClose={() => handleClose("singUpOut")} title={'Регистрация'}>
+          <DialogContent>
+          <TextField
+              autoFocus
+              margin="dense"
+              id="name"
+              label="Имя"
+              type="name"
+              fullWidth
+              variant="standard"
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="email"
+              label="E-mail"
+              type="email"
+              fullWidth
+              variant="standard"
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="password"
+              label="Пароль"
+              type="password"
+              fullWidth
+              variant="standard"
+            />
+          </DialogContent>
+          <CustomDialogActions>
+            <Button onClick={() => handleClose('singUpOut')} variant='outlined'>Закрыть</Button>
+            <Button onClick={() => handleClose('singUpOut')} variant='contained'>Войти</Button>
+          </CustomDialogActions>
+        </Modal>
       </LoginSide>
     </Wrapper>
   );

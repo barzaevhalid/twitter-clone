@@ -1,7 +1,5 @@
   import React from 'react';
-  import { styled } from '@mui/material/styles';
   import Dialog from '@mui/material/Dialog';
-
   import DialogTitle from '@mui/material/DialogTitle';
 
 
@@ -9,10 +7,11 @@ interface ModalProps  {
   title: string,
   children: React.ReactNode,
   open: boolean,
-  handleClose: () => void ,
+  // modalClose: "signOut" | "singUpOut"
+  handleClose: (close: "signOut" | "singUpOut") => void ,
 }
   
-  const Modal:React.FC<ModalProps> = ({open, handleClose, title, children }: ModalProps): React.ReactElement => {
+  const Modal:React.FC<ModalProps> = ({open, handleClose, title, children, }: ModalProps): React.ReactElement => {
     
     return (
       <Dialog open={open} onClose={handleClose}>
