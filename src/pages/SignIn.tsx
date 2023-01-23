@@ -5,12 +5,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import React from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
+import Modal from '../components/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Button from '@mui/material/Button';
 
 
 const Wrapper = styled('div')(({ theme }) => ({
@@ -60,14 +60,15 @@ const LoginSide = styled('section')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center '
 }));
-
 const CustomDialogActions = styled(DialogActions)(({theme}) => ({
   paddingBottom: '15px'
 })) 
+
 const LoginSideWrapper = styled('div')(({ theme }) => ({
   width: 380,
 }));
-const SignIn: React.FC = (props) => {
+const SignIn: React.FC = () => {
+
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -108,10 +109,8 @@ const SignIn: React.FC = (props) => {
 
         </LoginSideWrapper>
 
-        <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Войти в твиттер</DialogTitle>
-          <DialogContent>
-            
+        <Modal open={open} handleClose={handleClose} title={'Войти в твиттер'}>
+       <DialogContent>
             <TextField
               autoFocus
               margin="dense"
@@ -135,7 +134,7 @@ const SignIn: React.FC = (props) => {
             <Button onClick={handleClose} variant='outlined'>Закрыть</Button>
             <Button onClick={handleClose} variant='contained'>Войти</Button>
           </CustomDialogActions>
-        </Dialog>
+          </Modal>
       </LoginSide>
     </Wrapper>
   );
