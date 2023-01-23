@@ -1,12 +1,15 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import SignIn from './pages/SignIn';
-
-
-const App:React.FC = () => {
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
+const App: React.FC = () => {
   return (
     <div>
-      <SignIn/>
+      <Routes>
+        <Route path='/signin' element={<SignIn />} />
+        <Route path='/home' element={<Home />} />
+      </Routes>
     </div>
   );
 };

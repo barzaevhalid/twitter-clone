@@ -32,7 +32,7 @@ const List = styled('ul')(({ }) => ({
   listStyle: 'none',
   padding: 0,
   margin: 0,
-  width: 380,
+  
   "& h6": {
     display: 'flex',
     alignItems: 'center',
@@ -65,6 +65,8 @@ const CustomDialogActions = styled(DialogActions)(({ theme }) => ({
 const LoginSideWrapper = styled('div')(({ theme }) => ({
   width: 380,
 }));
+
+
 const SignIn: React.FC = () => {
 
   const [open, setOpen] = React.useState<'signIn' | 'signOut' | 'signUp' | 'singUpOut'>();
@@ -77,15 +79,13 @@ const SignIn: React.FC = () => {
     setOpen(close);
   };
 
-
-
   return (
     <Wrapper>
       <BlueSide>
         <TwitterIcon color='primary' sx={{ position: 'absolute', top: '70%', left: '50%', width: "350%", height: "350%", transform: "translate(-50%, -50%)" }} />
         <List>
           <ListItem>
-            <Typography variant='h6'> <SearchIcon />Читайте о том, что вам интересно.</Typography>
+            <Typography variant='h6'><SearchIcon />Читайте о том, что вам интересно.</Typography>
           </ListItem>
           <ListItem>
             <Typography variant='h6'><PeopleOutlineIcon />Узнавайте, о чем говорят в мире.</Typography>
