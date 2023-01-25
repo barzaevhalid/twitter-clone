@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import { Avatar, Container, IconButton, Paper, TextField } from '@mui/material';
+import { Avatar, Button, ButtonGroup, Container, IconButton, Paper, TextField } from '@mui/material';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TagIcon from '@mui/icons-material/Tag';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
@@ -13,8 +13,9 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { Typography, } from '@mui/material/';
 import { styled } from '@mui/material/styles';
 import { InputBase } from '@mui/material';
+import Tweet from '../components/Tweet';
 
-import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
+
 const List = styled('ul')(({ }) => ({
   margin: 0,
   padding: 0,
@@ -36,8 +37,9 @@ const SearchTextField = styled(InputBase)({
   }
 });
 
-const Home: React.FC = () => {
 
+
+const Home: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ height: '100vh' }} >
       <Grid sx={{ flexGrow: 1 }} container spacing={3} >
@@ -99,23 +101,13 @@ const Home: React.FC = () => {
           </List>
         </Grid>
         <Grid item xs={6}>
-
           <Paper sx={{ height: '100%', borderRadius: 0, borderBottom: 0, borderTop: 0, }} variant="outlined">
             <Paper variant='outlined' sx={{ borderRadius: 0, border: 0, padding: '10px 15px' }}>
               <Typography variant='h6' fontWeight={700}> Глваная
               </Typography>
               {/* <AutoAwesomeOutlinedIcon color='primary'/> */}
             </Paper>
-            <Paper variant='outlined' sx={{ borderRadius: 0, borderLeft: 0, borderRight: 0, }}>
-              <Grid container spacing={3} sx={{ padding: '10px 15px' }}>
-                <Grid item xs={1}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-                </Grid>
-                <Grid item xs={11} >
-                  <Typography><b>user</b> <span style={{color: 'gray'}}>@slark</span></Typography>
-                </Grid>
-              </Grid>
-            </Paper>
+           <Tweet/>
           </Paper>
         </Grid>
         <Grid item xs={3}>
