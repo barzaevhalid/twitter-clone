@@ -9,7 +9,7 @@ import Header from './Header';
 
 
 
-const Content = () => {
+const Content: React.FC = () => {
   return (
     <Paper sx={{ height: '100%', borderRadius: 0, borderBottom: 0, borderTop: 0, }}>
      
