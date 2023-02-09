@@ -2,6 +2,8 @@ import { Grid, Avatar, Button, styled, TextareaAutosize, CircularProgress, Typog
 import React, { useState } from 'react';
 import CropOriginalIcon from '@mui/icons-material/CropOriginal';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+
+
 const CustomAddTweetBlock = styled('div')(() => ({
   display: 'flex',
   justifyContent: 'space-between',
@@ -31,7 +33,11 @@ const CustomCircularProgress = styled(CircularProgress)(() => ({
 
 }))
 
-const AddTweetForm: React.FC = () => {
+interface AddTweetFormProps {
+  maxRows?: number,
+}
+
+const AddTweetForm: React.FC<AddTweetFormProps> = ({maxRows}: AddTweetFormProps) => {
   const [text, setText] = useState('')
   const textLimitProcent = text.length / 280 * 100
  
@@ -50,7 +56,7 @@ const AddTweetForm: React.FC = () => {
         <Avatar sx={{ marginTop: '5px' }} alt={`Аватарка пользователя `} />
       </Grid>
       <Grid item xs={11}>
-        <CustomTextareaAutosize minRows={1} placeholder='Что происходит ?' onChange={handleChangeTextarea}  value={text} />
+        <CustomTextareaAutosize minRows={1} maxRows={maxRows} placeholder='Что происходит ?' onChange={handleChangeTextarea}  value={text} />
         <CustomAddTweetBlock>
           <div>
             <CropOriginalIcon color='primary' />

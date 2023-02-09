@@ -31,37 +31,37 @@ const Home: React.FC = () => {
           <Content />
         </Grid>
         <Grid item xs={3} >
-          <div style={{position: 'sticky', top: 0,}}>
-          <SearchTextField fullWidth placeholder='Поиск в Твиттере' startAdornment={
-            <InputAdornment position="end">
-              <SearchIcon />
-            </InputAdornment>
-          } />
+          <div style={{ position: 'sticky', top: 0, }}>
+            <SearchTextField fullWidth placeholder='Поиск в Твиттере' startAdornment={
+              <InputAdornment position="end">
+                <SearchIcon />
+              </InputAdornment>
+            } />
 
-          <Paper variant='outlined' sx={{ marginTop: '30px', background: '#E6ECF0', borderLeft: 'none', borderRight: 'none', borderTop: 'none', }}>
-            <CustomHotTopics>
-              <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
-              <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
-              <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
-              <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
-            </CustomHotTopics>
-          </Paper>
-          <Paper variant='outlined' sx={{ marginTop: '30px', background: '#E6ECF0', borderLeft: 'none', borderRight: 'none', borderTop: 'none' }}>
-            <CustomHotTopics>
-              <Typography variant='h6' sx={{ padding: '10px', fontWeight: 700 }} borderBottom='1px solid lightgray'>Кого читать</Typography>
-              <div style={{ display: 'flex', padding: '10px', borderBottom: '1px solid lightgray' ,alignItems: 'center'}}>
-                <Avatar sx={{ marginTop: '5px' }} />
-                <div>
-                <Typography variant='h6' sx={{ padding: '0 10px 0 10px' }} >Кого читать тем</Typography>
-                <Typography  sx={{ paddingLeft: '10px', color: '#8d8888' }} >@Kianu  rivs</Typography>
+            <Paper variant='outlined' sx={{ marginTop: '30px', background: '#ededed5e', borderLeft: 'none', borderRight: 'none', borderTop: 'none', }}>
+              <CustomHotTopics>
+                <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
+                <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
+                <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
+                <Typography variant='h6' sx={{ padding: '10px' }} borderBottom='1px solid lightgray'>Актуальные темы</Typography>
+              </CustomHotTopics>
+            </Paper>
+            <Paper variant='outlined' sx={{ marginTop: '30px', background: '#ededed5e', borderLeft: 'none', borderRight: 'none', borderTop: 'none' }}>
+              <CustomHotTopics>
+                <Typography variant='h6' sx={{ padding: '10px', fontWeight: 700 }} borderBottom='1px solid lightgray'>Кого читать</Typography>
+                <div style={{ display: 'flex', padding: '10px', borderBottom: '1px solid lightgray', alignItems: 'center' }}>
+                  <Avatar sx={{ marginTop: '5px' }} />
+                  <div>
+                    <Typography variant='h6' sx={{ padding: '0 10px 0 10px' }} >Кого читать тем</Typography>
+                    <Typography sx={{ paddingLeft: '10px', color: '#8d8888' }} >@Kianu  rivs</Typography>
+                  </div>
+                  <PersonAddAltIcon color='primary' sx={{ marginLeft: '10px' }} />
                 </div>
-                <PersonAddAltIcon color='primary' sx={{marginLeft: '10px'}}/>
-              </div>
-            </CustomHotTopics>
-          </Paper>
+              </CustomHotTopics>
+            </Paper>
           </div>
         </Grid>
-        
+
       </Grid>
     </Container>
   );

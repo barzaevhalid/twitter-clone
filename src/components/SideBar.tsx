@@ -1,5 +1,5 @@
 import { Button, Grid, IconButton, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TagIcon from '@mui/icons-material/Tag';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
@@ -13,6 +13,8 @@ import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import SearchIcon from '@mui/icons-material/Search';
 import CreateIcon from '@mui/icons-material/Create';
+import Modal from './Dialog';
+import AddTweetForm from './AddTweetForm';
 const List = styled('ul')(({ }) => ({
   margin: 0,
   padding: 0,
@@ -37,8 +39,17 @@ const ListItem = styled('li')(({ theme }) => ({
 
 
 const SideBar: React.FC = (): React.ReactElement => {
+  const [visibleAddTweet, setVisibleAddTweet] = useState<boolean>(false)
+
+  const handleClickOpenAddTweet = ():void => {
+    setVisibleAddTweet(true)
+  }
+  const onCloseAddTweet = ():void => {
+    setVisibleAddTweet(false)
+  }
   const matches = useMediaQuery('(min-width:1300px)');
   const widthInSearch = useMediaQuery('(min-width: 1000px)')
+
 
   return (
     <Grid item xs={matches ? 3 : 1}>
@@ -82,8 +93,9 @@ const SideBar: React.FC = (): React.ReactElement => {
           {matches && <Typography fontWeight='inherit' fontSize={19} ml="12px">Еще</Typography>}
         </ListItem>
       
-        { matches ? <Button color='primary' variant='contained' fullWidth sx={{marginTop: '30px', padding: '10px'}}>Твитнуть</Button>
-        :<Button color='primary' variant='contained' fullWidth sx={{marginTop: '30px', padding: '10px', width: '30px', height: '40px', minWidth: '40px',minHeight: '100%', marginLeft: '7px'}}><CreateIcon /></Button> }
+        { matches ? <Button onClick={handleClickOpenAddTweet} color='primary' variant='contained' fullWidth sx={{marginTop: '30px', padding: '10px'}}>Твитнуть</Button>
+        :<Button onClick={handleClickOpenAddTweet} color='primary' variant='contained' fullWidth sx={{marginTop: '30px', padding: '10px', width: '30px', height: '40px', minWidth: '40px',minHeight: '100%', marginLeft: '7px'}}><CreateIcon /></Button> }
+        {visibleAddTweet && <Modal title='' open={visibleAddTweet} handleClose={onCloseAddTweet}><div style={{width: 500, padding: 20}}><AddTweetForm maxRows={15}/></div></Modal>}
       </List>
       
     </Grid>
