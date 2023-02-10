@@ -95,7 +95,7 @@ const SideBar: React.FC = (): React.ReactElement => {
       
         { matches ? <Button onClick={handleClickOpenAddTweet} color='primary' variant='contained' fullWidth sx={{marginTop: '30px', padding: '10px'}}>Твитнуть</Button>
         :<Button onClick={handleClickOpenAddTweet} color='primary' variant='contained' fullWidth sx={{marginTop: '30px', padding: '10px', width: '30px', height: '40px', minWidth: '40px',minHeight: '100%', marginLeft: '7px'}}><CreateIcon /></Button> }
-        {visibleAddTweet && <Modal title='' open={visibleAddTweet} handleClose={onCloseAddTweet}><div style={{width: 500, padding: 20}}><AddTweetForm maxRows={15}/></div></Modal>}
+        {visibleAddTweet && <Modal  open={visibleAddTweet} handleClose={onCloseAddTweet}><div style={{width: 500, padding: 20}}><AddTweetForm maxRows={15}/></div></Modal>}
       </List>
       
     </Grid>

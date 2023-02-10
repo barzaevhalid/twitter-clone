@@ -4,7 +4,7 @@
 
 
 interface ModalProps  {
-  title: string,
+  title?: string,
   children: React.ReactNode,
   open: boolean,
   // modalClose: "signOut" | "singUpOut"
