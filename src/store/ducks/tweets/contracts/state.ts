@@ -1,9 +1,10 @@
-export enum LoadingState {
-  LOADED = "LOADED",
+export enum LoadingState { 
+  LOADAED = 'LOADAED',
   ERROR = "ERROR",
-  NEVER = "NEVER"
+  NEVER = 'NEVER'
 }
 export interface Tweet {
+  _id: string,
   text: string,
   user: {
     fullname: string,
@@ -11,7 +12,8 @@ export interface Tweet {
     avatarUrl: string,
   }
 }
+
 export interface TweetsState {
-  items: Tweet[];
-  loadingState: LoadingState
+ items: Tweet[]
+ loadingState: LoadingState
 }
