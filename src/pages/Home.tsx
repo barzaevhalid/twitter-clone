@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import { Avatar, Button, ButtonGroup, Container, IconButton, InputAdornment, Paper, TextField } from '@mui/material';
 
@@ -23,6 +23,7 @@ const CustomHotTopics = styled('div')(() => ({
 
 
 const Home: React.FC = () => {
+ 
   return (
     <Container maxWidth="lg" sx={{ height: '100vh' }}>
       <Grid sx={{ flexGrow: 1, }} container spacing={3}>
