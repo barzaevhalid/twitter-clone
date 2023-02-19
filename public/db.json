@@ -1,0 +1,100 @@
+{
+  "tweets": [
+      {
+        "_id": "63e727f1588eca4f254a81a6",
+        "text": "Nulla ex consequat est veniam amet duis labore do ad.",
+        "user": {
+          "fullname": "Carolina Odonnell",
+          "username": "Tyler",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f1cd221e57411f8d8f",
+        "text": "Incididunt exercitation proident ut minim in pariatur veniam commodo esse culpa pariatur officia sint.",
+        "user": {
+          "fullname": "Galloway Bauer",
+          "username": "Jewell",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f16d554862fc5d340c",
+        "text": "Qui incididunt eiusmod ea aliqua exercitation dolore irure nulla.",
+        "user": {
+          "fullname": "Erma Goff",
+          "username": "Eva",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f19100ade25482087e",
+        "text": "Consectetur veniam duis officia ut esse ex aliquip in nulla irure non reprehenderit.",
+        "user": {
+          "fullname": "Lenora Casey",
+          "username": "Haney",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f16d708ebaa32f537f",
+        "text": "Consectetur adipisicing amet magna ipsum pariatur id.",
+        "user": {
+          "fullname": "Jeannie Solomon",
+          "username": "Joanna",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f19fd8c57e2d9da813",
+        "text": "Dolore aute culpa adipisicing do ad in reprehenderit voluptate.",
+        "user": {
+          "fullname": "Burt Herring",
+          "username": "Gutierrez",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f1508996b0796758a0",
+        "text": "Qui fugiat ex irure irure est.",
+        "user": {
+          "fullname": "Munoz Bass",
+          "username": "Kathrine",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f1d45fbabad5e0da8c",
+        "text": "Exercitation quis sunt non aute reprehenderit ea sit dolore.",
+        "user": {
+          "fullname": "Kristin Hicks",
+          "username": "Lina",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f1e90120e3884d481a",
+        "text": "Nostrud et non fugiat Lorem ad ut amet aute sint.",
+        "user": {
+          "fullname": "Hudson Roman",
+          "username": "Schultz",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      },
+      {
+        "_id": "63e727f1ba33ffa8811fbfe1",
+        "text": "Proident in minim elit sit quis.",
+        "user": {
+          "fullname": "Cooley Camacho",
+          "username": "Deloris",
+          "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+        }
+      }
+    ],
+    "user": {
+      "_id": "63e727f1cd221e57411f8d8f",
+      "fullname": "Carolina Odonnell",
+      "username": "Tyler",
+      "avatarUrl": "https://pibig.info/uploads/posts/2021-04/1619596772_14-pibig_info-p-kotenok-art-anime-krasivo-15.jpg"
+    } 
+}

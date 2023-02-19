@@ -4,7 +4,7 @@ import { LoadingState, Tweet, TweetsState } from "./contracts/state";
 export enum TweetsActionType {
   SET_TWEETS  = 'tweets/SET_TWEETS',
   FETCH_TWEETS  = 'tweets/FETCH_TWEETS',
-  SET_LOADGIN_STATE = 'tweets/SET_LOADGIN_STATE'
+  SET_LOADGIN_STATE = 'tweets/SET_LOADGIN_STATE'  
 } 
 
 export interface SetTweetActionsInterface extends Action<TweetsActionType>{
